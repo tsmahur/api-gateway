@@ -11,6 +11,7 @@
 ##
 ### Dependency
     eureka discover client, gateway, spring boot actuator, spring-cloud-starter-netflix-hystrix
+   ***using older sprng boot version and dependencies - latest are having some problem with circuit breaker for fallback config (-filters)***
 
 ### application.yml
     port, app name, gateway-routes, predicates, filters (for fallback), hystrix config,

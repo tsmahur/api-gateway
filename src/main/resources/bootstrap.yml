@@ -1,5 +1,6 @@
-spring:
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8094
+# un-comment these if want to load the properties form  github using cloud-config-server ms
+#spring:
+#  cloud:
+#    config:
+#      enabled: true
+#      uri: http://localhost:8094

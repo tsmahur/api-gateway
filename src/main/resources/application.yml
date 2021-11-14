@@ -26,6 +26,13 @@ spring:
                 name: ADDRESS-SERVICE
                 fallbackuri: forward:/addressServiceFallBack
 
+#enable hystrix stream
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
 hystrix:
   command:
     fallbackcmd:
@@ -34,17 +41,12 @@ hystrix:
           thread:
             timeoutInMilliseconds: 4000
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
-
-#eureka:
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka
-#  instance:
-#    hostname: localhost
+# comment these if want to load the properties form  github using cloud-config-server ms
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost

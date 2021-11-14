@@ -38,3 +38,16 @@
         "email": "ac@abc.com",
         "addressId": 1
     }
+    POST http://localhost:8092/users/saveUserAndAddress
+    {
+    "user": {
+        "firstName": "Ravi",
+        "lastName": "Verma",
+        "email": "ac@abc.com"
+    },
+    "address": {
+        "city": "Noida2",
+        "state": "Up",
+        "pinCode": 1233456
+    }
+    }
